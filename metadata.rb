@@ -1,6 +1,6 @@
 name 'influxdb'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Raj Kiran Gade'
+maintainer_email 'rajkiran.gade@gmail.com'
 license 'all_rights'
 description 'Installs/Configures influxdb'
 long_description 'Installs/Configures influxdb'
