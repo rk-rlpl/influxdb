@@ -8,14 +8,13 @@ if node['platform'] == 'ubuntu'
   package 'apt-transport-https'
 
   apt_repository 'influxdb' do
-    uri        "https://repos.influxdata.com/#{node['OS']['DISTRIB_ID']}"
+    uri        "https://repos.influxdata.com/#{node['Ubuntu']['DISTRIB_ID']}"
     key        'https://repos.influxdata.com/influxdb.key'
-    components ['xenial' , 'stable']
+    components ["#{node['Ubuntu']['DISTRIB_CODENAME']}" , 'stable']
   end
 
   apt_update 'all platforms' do
-    frequency 86400
-    action :periodic
+    action:update 
   end
 
   package 'influxdb'
