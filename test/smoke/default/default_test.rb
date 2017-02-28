@@ -18,3 +18,8 @@ end
 describe port(8088) do
   it { should be_listening}
 end
+
+describe service('influxdb') do
+  it { should be_running }
+  it { should be_enabled }
+end
